@@ -1,5 +1,20 @@
-<p *ngFor="let tempProduct of products">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Units in Stock</th>
+        </tr>
+    </thead>
 
-    {{ tempProduct.name}} : {{tempProduct.unitPrice | currency: 'USD'}}
+    <tbody>
+        <tr *ngFor="let tempProduct of products">
+            <td> {{ tempProduct.name}}</td>
+            <td> {{tempProduct.unitPrice | currency: 'USD'}} </td>
+            <td> {{ tempProduct.unitsInStock}}</td>
+        </tr>
+    </tbody>
 
-</p>
+</table>
+
+
