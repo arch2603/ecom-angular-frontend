@@ -14,13 +14,13 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.listProducts();
+    this.listProducts(); //hook
   }
 
   listProducts(){
     this.productService.getProductList().subscribe(
       data => {
-        this.products = data;
+        this.products = data; // data return is assign to the public field products above.
       }
     )
   }
