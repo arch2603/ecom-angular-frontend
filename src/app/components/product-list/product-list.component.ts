@@ -5,8 +5,6 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  // templateUrl: './product-list.component.html',
-  // templateUrl: './product-list-table.component.html',
   templateUrl: './product-list-grid.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -24,9 +22,13 @@ export class ProductListComponent implements OnInit {
   }
 
   listProducts(){
+
     const hasCategoryId : boolean = this.route.snapshot.paramMap.has('id');
+
     if(hasCategoryId){
-      this.currentCategoryId =+ this.route.snapshot.paramMap.get('id')!; //non-null assertion operator tells compiler object is not null
+
+      this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!; //non-null assertion operator tells compiler object is not null
+    
     }else{
         this.currentCategoryId = 1;
     }
@@ -36,6 +38,8 @@ export class ProductListComponent implements OnInit {
         this.products = data; // data return is assign to the public field products above.
       }
     )
+
+    console.log(this.products);
   }
 
 }
