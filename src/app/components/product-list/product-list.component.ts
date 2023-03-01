@@ -13,6 +13,11 @@ export class ProductListComponent implements OnInit {
   products: Product[] = [];
   currentCategoryId : number = 1;
   searchMode: boolean = false;
+
+  //properties for pagination
+  thePageNumber: number = 1;
+  thePageSize: number = 1;
+  theTotalElements: number = 0;
   
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
