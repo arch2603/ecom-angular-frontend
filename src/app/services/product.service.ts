@@ -41,6 +41,11 @@ export class ProductService
       map(response => response._embedded.productCategory)
     )
   }
+
+  getProduct(theProductId: number)
+  {
+    
+  }
 }
 
 interface GetResponseProducts{
