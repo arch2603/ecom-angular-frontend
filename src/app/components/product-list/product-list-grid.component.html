@@ -4,9 +4,11 @@
             <div class="row">
                 <!-- loop over the collection of products-->
                <div *ngFor="let tempProduct of products" class="col-md-3">
-                    <a routerLink="/products/{{ tempProduct.id}}"></a>
                     <div class="product-box">
-                        <img src="{{tempProduct.imageUrl}}" alt="" class="img-responsive">
+                        <a routerLink="/products/{{ tempProduct.id}}">
+                            <img src="{{tempProduct.imageUrl}}" alt="" class="img-responsive">
+                        </a>
+                      
                         <a routerLink="/products/{{ tempProduct.id}}">
                             <h1>{{tempProduct.name}}</h1>
                         </a>
