@@ -17,7 +17,7 @@ export class ProductListComponent implements OnInit {
 
   //properties for pagination
   thePageNumber: number = 1;
-  thePageSize: number = 1;
+  thePageSize: number = 5;
   theTotalElements: number = 0;
   
   
@@ -86,6 +86,13 @@ export class ProductListComponent implements OnInit {
       }
     );
 
+  }
+
+  updatePageSize(thePageSize: string)
+  {
+    this.thePageSize = +thePageSize
+    this.thePageNumber = 1;
+    this.listProducts();
   }
 
 }
