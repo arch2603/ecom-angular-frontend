@@ -140,10 +140,10 @@ export class CheckoutComponent implements OnInit {
           } else {
             this.billingAddressStates = data
           }
-
+          //select the first state by default i.e. alphabetical order
           formGroup?.get('state')?.setValue(data[0]);
       }
-    )
+    );
   }
 
 }
