@@ -13,6 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "p-cancelable",
+              "tiny-emitter",
+              "@sindresorhus/to-milliseconds",
+              "q",
+              "detect-node",
+              "parse-ms"
+            ],
             "outputPath": "dist/ecom-angular-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -35,8 +43,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
